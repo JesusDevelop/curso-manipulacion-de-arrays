@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const tasks = [
+            {name:'Hacer la cama',done:true},
+            {name:'Limpiar piso',done:true},
+            {name:'Estudiar platzi',done:false},
+            {name:'Empezar con el curso de arrays de js',done:true},
+            {name:'Almorzar',done:true},
+            {name:'dormir la siesta',done:false},
+            {name:'Llamar a mamá',done:false}
+            ];
+        const app = document.getElementById('app');
+
+        tasks.forEach( taskP => {
+            app.innerHTML += `<li>${taskP.name} - ${taskP.done}</li>`;
+        });
+    </script>
+</body>
+</html>
